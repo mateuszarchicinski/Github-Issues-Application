@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Define Unicode-->
+    <meta charset="utf-8">
+    <!--Define a Compatibility with IE-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!--Define Flexible Viewport for Mobile Devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Phone Numbers Detection-->
+    <meta name="format-detection" content="telephone=no">
+    <!--Search Engine Optimization Sources-->
+    <title>Github Issues Application</title>
+    <meta name="description" content="Simple view with application window which contains list of all, opened and closed issues from Github.">
+    <meta name="keywords" content="Github Issues, Application, Task">
+    <meta name="author" content="Mateusz Archiciński">
+    <meta name="robots" content="index, follow, noodp, noydir">
+    <!--Icon Sources-->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!--Google Chrome - Theme Color-->
+    <meta name="theme-color" content="#1E2327">
+    <!--Cascading Style Sheets Sources-->
+    <!--build:css css/main.min.css-->
+    <!--Vendors Style Sheets Sources-->
+    <link rel="stylesheet" href="css/vendors/normalize.css">
+    <!--Application Style Sheets Sources-->
+    <link rel="stylesheet" href="css/main.css">
+    <!--endbuild-->
+  </head>
+  <body>
+    <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</p><![endif]-->
+    <!-- .trimmed-bg CSS class can be removed, then background will cover all available white spaces-->
+    <div class="desktop-view trimmed-bg"></div>
+    <h1 class="hidden">Github Issues Application - Created by Mateusz Archiciński</h1>
+    <main class="app-window">
+      <nav class="app-navbar" role="navigation">
+        <div class="osx-buttons osx-buttons-js">
+          <button class="osx-buttons__close" type="button" aria-label="To close application window"></button>
+          <button class="osx-buttons__minimize" type="button" aria-label="To minimize application window"></button>
+          <button class="osx-buttons__maximize" type="button" aria-label="To maximize application window"></button>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <button class="nav-button nav-button-js" type="button" data-status="all"><span class="icon icon-small icon-github nav-button__icon" aria-hidden="true"></span><span class="nav-button__info">All</span><span class="nav-button__issues-count">12</span></button>
+          </li>
+          <li>
+            <button class="nav-button nav-button-js" type="button" data-status="opened"><span class="icon icon-small icon-issues-opened nav-button__icon" aria-hidden="true"></span><span class="nav-button__info">Open</span><span class="nav-button__issues-count">4</span></button>
+          </li>
+          <li>
+            <button class="nav-button nav-button-js" type="button" data-status="closed"><span class="icon icon-small icon-issues-closed nav-button__icon" aria-hidden="true"></span><span class="nav-button__info">Closed</span><span class="nav-button__issues-count">8</span></button>
+          </li>
+        </ul>
+      </nav>
+      <div class="app-content">
+        <div class="issues-daily"><span class="issues-daily__date">19-07-2016</span>
+          <ul class="issues-daily__list">
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Page changes</a>
+              <label><span class="icon icon-small icon-star-marked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="1" checked="true">
+              </label>
+            </li>
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Review of last issues</a>
+              <label><span class="icon icon-small icon-star-marked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="2" checked="true">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="issues-daily"><span class="issues-daily__date">18-07-2016</span>
+          <ul class="issues-daily__list">
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Visual UI Update Review</a>
+              <label><span class="icon icon-small icon-star-notmarked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="3">
+              </label>
+            </li>
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Sidebar changes</a>
+              <label><span class="icon icon-small icon-star-notmarked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="4">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="issues-daily"><span class="issues-daily__date">15-07-2016</span>
+          <ul class="issues-daily__list">
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Crash update</a>
+              <label><span class="icon icon-small icon-star-notmarked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="5">
+              </label>
+            </li>
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Page visual UI Update Review</a>
+              <label><span class="icon icon-small icon-star-marked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="6" checked="true">
+              </label>
+            </li>
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Sidebar update</a>
+              <label><span class="icon icon-small icon-star-notmarked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="7">
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="issues-daily"><span class="issues-daily__date">14-07-2016</span>
+          <ul class="issues-daily__list">
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Crash issue</a>
+              <label><span class="icon icon-small icon-star-marked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="8" checked="true">
+              </label>
+            </li>
+            <li class="issues-daily__list-item"><a class="issues-daily__link" href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help">Visual update & Crash resolve</a>
+              <label><span class="icon icon-small icon-star-marked" aria-hidden="true"></span><span class="text-hidden">Mark as favourite issue</span>
+                <input class="hidden" name="issueFavourite" type="checkbox" value="9" checked="true">
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <!--JavaScripts Sources-->
+    <!--build:js js/main.min.js-->
+    <!--Application JavaScripts Sources-->
+    <script src="js/main.js"></script>
+    <!--endbuild-->
+  </body>
+</html>

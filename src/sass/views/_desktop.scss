@@ -1,0 +1,21 @@
+//~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* DESKTOP *~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+.desktop {
+    &-view {
+        background-image: url("/images/desktop-bg.jpg");
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        z-index: -1;
+        @extend %center-block;
+        &.trimmed-bg {
+            width: 1000px;
+            height: 1000px;
+            background-image: url("/images/desktop-bg-1000x1000.jpg");
+        }
+    }
+}

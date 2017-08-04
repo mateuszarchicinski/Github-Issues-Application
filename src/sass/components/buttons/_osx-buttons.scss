@@ -1,0 +1,54 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* OSX BUTTONS *~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+// .osx-buttons
+$osx-buttons__background-color: $color__black-russian !default;
+// .osx-buttons__close
+$osx-buttons__close__background-color: $color__tomato !default;
+// .osx-buttons__minimize
+$osx-buttons__minimize__background-color: $color__moon-yellow !default;
+// .osx-buttons__maximize
+$osx-buttons__maximize__background-color: $color__dark-pastel-green !default;
+// :hover
+$osx-buttons__hover__box-shadow: 0 0 15px 5px $color__white !default;
+// :active & :focus
+$osx-buttons__active-focus__box-shadow: 0 0 15px 5px darken($color__navy-blue, 4%) !default;
+
+
+.osx-buttons {
+    height: 40px;
+    background-color: $osx-buttons__background-color;
+    &__close,
+    &__minimize,
+    &__maximize {
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        margin: 15px 10px 0 0;
+        transition: 0.2s box-shadow ease;
+        &:hover {
+            box-shadow: $osx-buttons__hover__box-shadow;
+        }
+        &:active,
+        &:focus {
+            box-shadow: $osx-buttons__active-focus__box-shadow;
+        }
+    }
+    &__close {
+        background-color: $osx-buttons__close__background-color;
+        margin-left: 15px;
+    }
+    &__minimize {
+        background-color: $osx-buttons__minimize__background-color;
+    }
+    &__maximize {
+        background-color: $osx-buttons__maximize__background-color;
+    }
+}

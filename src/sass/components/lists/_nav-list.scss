@@ -1,0 +1,54 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* NAV LIST *~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+// .nav-button
+$nav-button__color: $color__white !default;
+// :hover
+$nav-button__hover__background-color: $color__valhalla !default;
+// :active & :focus
+$nav-button__active-focus__box-shadow: inset 0 0 1px 1px darken($color__navy-blue, 4%) !default;
+// .nav-button__issues-count
+$nav-button__issues-count__color: $secondary-text-color !default;
+
+
+.nav {
+    &-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &-button {
+        width: 100%;
+        height: 50px;
+        line-height: 16px;
+        background: 0;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+        font-size: 14px;
+        color: $nav-button__color;
+        border: 0;
+        outline: 0;
+        padding: 17px 15px;
+        transition: 0.2s background-color ease;
+        &:hover {
+            background-color: $nav-button__hover__background-color;
+        }
+        &:active,
+        &:focus {
+            box-shadow: $nav-button__active-focus__box-shadow;
+        }
+        &__icon {}
+        &__info {
+            flex: 1;
+            text-align: left;
+            margin-left: 10px;
+        }
+        &__issues-count {
+            font-family: ProximaNova;
+            color: $nav-button__issues-count__color;
+        }
+    }
+}

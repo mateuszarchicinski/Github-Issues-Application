@@ -1,0 +1,59 @@
+//~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* APP *~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~//
+
+
+// .app-window
+$app-window__box-shadow: 0 0 15px 0 rgba($color__black, 0.5) !default;
+// .app-navbar
+$app-navbar__background-color: rgba($color__black-russian, 0.96) !default;
+// .app-content
+$app-content__background-color: $color__white-smoke !default;
+
+
+.app {
+    &-window {
+        width: 650px;
+        height: 500px;
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: $app-window__box-shadow;
+        @extend %center-block;
+    }
+    &-navbar {
+        width: 150px;
+        background-color: $app-navbar__background-color;
+    }
+    &-content {
+        background-color: $app-content__background-color;
+        flex: 1;
+    }
+}
+
+
+// .app-content - scrollbar
+$app-content__scrollbar__background-color: $divider-color !default;
+$app-content__scrollbar__border: 3px solid rgba($color__black, 0) !default;
+
+
+.scrollbar-supported {
+    .app-content {
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $app-content__scrollbar__background-color;
+            background-clip: padding-box;
+            border-radius: 2px;
+            border: $app-content__scrollbar__border;
+            border-top-width: 12px;
+            border-bottom-width: 12px;
+        }
+    }
+    .issues-daily {
+        padding-right: 10px;
+    }
+}

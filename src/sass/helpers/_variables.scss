@@ -1,0 +1,49 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* VARIABLES *~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+// ---------------------
+//     HELPERS
+// ---------------------
+
+
+// *--------- VARIABLES ---------*
+// Lines Heights
+$line-height__1-2:     1.2;
+$line-height__1-3:     1.3;
+
+// Fonts
+$font__roboto:         Roboto;
+$font__helvetica-neue: "Helvetica Neue";
+$font__sans-serif:     sans-serif;
+
+// Fonts Sizes
+$font-size__1:         1em;
+
+// Fonts Weights
+$font-weight__bolder:  600;
+$font-weight__bold:    500;
+$font-weight__normal:  400;
+$font-weight__lighter: 300;
+
+// Colors
+$primary-color-dark:   $color__pine-green;
+$primary-color:        $color__dark-cyan;
+$primary-color-light:  $color__scandal;
+$accent-color:         $color__amber;
+$primary-text-color:   $color__black;
+$secondary-text-color: $color__grey-suit;
+$divider-color:        $color__gainsboro;
+
+// Breaks Points
+$break-point__1:       959px;
+$break-point__2:       599px;
+
+
+// *--------- TYPOGRAPHY ---------*
+$base__line-height: $line-height__1-2;
+$base__font-family: $font__roboto, $font__helvetica-neue, $font__sans-serif;
+$base__font-size: $font-size__1;
+$base__font-weight: $font-weight__normal;
+

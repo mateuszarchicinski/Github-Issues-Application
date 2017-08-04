@@ -1,0 +1,34 @@
+//~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* ICONS *~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~~~//
+
+
+.icon {
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    &-small {
+        width: 16px;
+        height: 16px;
+    }
+    &-issues {
+        &-opened {
+            background-image: url("/images/icon-opened-issues.svg");
+        }
+        &-closed {
+            background-image: url("/images/icon-closed-issues.svg");
+        }
+    }
+    &-github {
+        background-image: url("/images/icon-github.svg");
+    }
+    &-star {
+        &-notmarked {
+            background-image: url("/images/icon-star-notmarked.svg");
+        }
+        &-marked {
+            background-image: url("/images/icon-star-marked.svg");
+        }
+    }
+}

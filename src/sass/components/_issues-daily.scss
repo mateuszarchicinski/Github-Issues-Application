@@ -1,0 +1,58 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* ISSUES DAILY *~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+// .issues-daily__date
+$issues-daily__date__color: $secondary-text-color !default;
+// issues-daily__list-item
+$issues-daily__list-item__background-color: $color__white !default;
+$issues-daily__list-item__border: 1px solid $divider-color !default;
+// issues-daily__link:hover
+$issues-daily__link__hover__color: $primary-color !default;
+// issues-daily__link:active
+$issues-daily__link__active__color: $primary-color-dark !default;
+
+
+.issues-daily {
+    padding: 0 15px;
+    margin-top: 5px;
+    &:last-child {
+        margin-bottom: 11px;
+    }
+    &__date {
+        font-size: 12px;
+        color: $issues-daily__date__color;
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 6px 0 0;
+        &-item {
+            background-color: $issues-daily__list-item__background-color;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 11px 8px;
+            border-radius: 5px;
+            border: $issues-daily__list-item__border;
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__link {
+        font-size: 15px;
+        &,
+        &:link,
+        &:visited {
+            color: inherit;
+        }
+        &:hover {
+            color: $issues-daily__link__hover__color;
+        }
+        &:active {
+            color: $issues-daily__link__active__color;
+        }
+    }
+}
