@@ -1,0 +1,35 @@
+// STYLES IN CASE OF SUPPORTING SROLLBAR
+
+
+@charset 'utf-8';
+
+
+//~~ LOCAL VARIABLES & HELPERS ~~//
+@import 'helpers/colors';
+@import 'helpers/variables';
+
+
+// .app-content ~ scrollbar
+$app-content__scrollbar__background-color: $divider-color !default;
+$app-content__scrollbar__border: 3px solid rgba($color__black, 0) !default;
+
+
+.scrollbar-supported {
+    .app-content {
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $app-content__scrollbar__background-color;
+            background-clip: padding-box;
+            border-radius: 2px;
+            border: $app-content__scrollbar__border;
+            border-top-width: 12px;
+            border-bottom-width: 12px;
+        }
+    }
+    .issues-daily {
+        padding-right: 10px;
+    }
+}

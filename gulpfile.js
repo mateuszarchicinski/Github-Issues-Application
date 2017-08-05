@@ -72,7 +72,7 @@ gulp.task('sass:css', () => {
     $.util.log($.util.colors.green('SASS TO CSS TASK RUNNING...'));
 
 
-    return gulp.src(`${PROJECT_CONFIG.DIRECTORY.WORK_DIR}/sass/main.s+(a|c)ss`)
+    return gulp.src(`${PROJECT_CONFIG.DIRECTORY.WORK_DIR}/sass/*.s+(a|c)ss`)
         .pipe($.plumber()) // https://github.com/floatdrop/gulp-plumber#monkey-gulp-plumber
         .pipe($.sourcemaps.init()) // https://github.com/floridoo/gulp-sourcemaps#init-options
         .pipe($.sass.sync({ // https://github.com/sass/node-sass#options
@@ -332,6 +332,7 @@ gulp.task('copy', () => {
 
 
     return gulp.src([
+        `${PROJECT_CONFIG.DIRECTORY.WORK_DIR}/css/{flexbox-unsupport,scrollbar-support}.css`,
         `${PROJECT_CONFIG.DIRECTORY.WORK_DIR}/files/**/*`,
         `${PROJECT_CONFIG.DIRECTORY.WORK_DIR}/fonts/**/*`,
         `${PROJECT_CONFIG.DIRECTORY.WORK_DIR}/images/**/*`,

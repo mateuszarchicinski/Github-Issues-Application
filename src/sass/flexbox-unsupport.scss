@@ -1,0 +1,59 @@
+// STYLES IN CASE OF SUPPORTING SROLLBAR
+
+
+@charset 'utf-8';
+
+
+//~~ LOCAL VARIABLES & HELPERS ~~//
+@import 'helpers/mixins';
+@import 'base/extends';
+
+
+.flexbox-unsupported {
+    .app {
+        &-window {
+            @extend %clearfix;
+        }
+        &-navbar,
+        &-content {
+            height: 100%;
+            float: left;
+        }
+        &-content {
+            width: 500px;
+        }
+    }
+    .nav {
+        &-button {
+            display: table;
+            &__icon,
+            &__info,
+            &__issues-count {
+                display: table-cell;
+            }
+            &__icon {
+                width: 18%;
+            }
+            &__info {
+                width: 100%;
+                text-indent: 8px;
+            }
+        }
+    }
+    .issues-daily {
+        &__list {
+            &-item {
+                line-height: 0;
+                text-align: justify;
+                @include after {
+                    content: "";
+                    width: 100%;
+                    display: inline-block;
+                }
+                >* {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

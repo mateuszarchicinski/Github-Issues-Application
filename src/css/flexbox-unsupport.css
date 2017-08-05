@@ -1,0 +1,35 @@
+.flexbox-unsupported .app-window::before, .flexbox-unsupported .app-window::after {
+  content: "";
+  display: table; }
+
+.flexbox-unsupported .app-window::after {
+  clear: both; }
+
+.flexbox-unsupported .app-navbar, .flexbox-unsupported .app-content {
+  height: 100%;
+  float: left; }
+
+.flexbox-unsupported .app-content {
+  width: 500px; }
+
+.flexbox-unsupported .nav-button {
+  display: table; }
+  .flexbox-unsupported .nav-button__icon, .flexbox-unsupported .nav-button__info, .flexbox-unsupported .nav-button__issues-count {
+    display: table-cell; }
+  .flexbox-unsupported .nav-button__icon {
+    width: 18%; }
+  .flexbox-unsupported .nav-button__info {
+    width: 100%;
+    text-indent: 8px; }
+
+.flexbox-unsupported .issues-daily__list-item {
+  line-height: 0;
+  text-align: justify; }
+  .flexbox-unsupported .issues-daily__list-item::after {
+    content: "";
+    width: 100%;
+    display: inline-block; }
+  .flexbox-unsupported .issues-daily__list-item > * {
+    display: inline-block; }
+
+/*# sourceMappingURL=maps/flexbox-unsupport.css.map */
