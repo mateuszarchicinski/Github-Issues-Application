@@ -11,3 +11,9 @@
     bottom: 0;
     margin: auto;
 }
+
+
+// Modules: app
+%clearfix {
+    @include clearfix;
+}

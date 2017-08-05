@@ -5,7 +5,8 @@
 
 .desktop {
     &-view {
-        background-image: url("/images/desktop-bg.jpg");
+        background-image: url("../images/desktop-bg.jpg");
+        background-attachment: fixed;
         background-position: bottom left;
         background-repeat: no-repeat;
         background-size: cover;
@@ -15,7 +16,26 @@
         &.trimmed-bg {
             width: 1000px;
             height: 1000px;
-            background-image: url("/images/desktop-bg-1000x1000.jpg");
+            background-image: url("../images/desktop-bg-1000x1000.jpg");
+            background-size: 1000px 1000px;
+            background-position: center;
+            @media screen and (max-width: 999px) {
+                width: auto;
+                height: auto;
+                background-position: bottom left;
+                background-size: cover;
+            }
         }
+    }
+}
+
+
+.trimmed-bg ~ .app-window .app-navbar::before {
+    background-image: url("../images/desktop-bg-1000x1000.jpg");
+    background-size: 1000px 1000px;
+    background-position: center;
+    @media screen and (max-width: 999px) {
+        background-position: bottom left;
+        background-size: cover;
     }
 }

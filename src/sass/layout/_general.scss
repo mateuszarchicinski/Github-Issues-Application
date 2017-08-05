@@ -28,9 +28,11 @@ body {
     color: $body__color;
 }
 
+
 .clearfix {
-    @include clearfix;
+    @extend %clearfix;
 }
+
 
 .hidden {
     display: none;

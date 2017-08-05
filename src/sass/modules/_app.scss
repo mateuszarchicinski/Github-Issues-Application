@@ -6,7 +6,7 @@
 // .app-window
 $app-window__box-shadow: 0 0 15px 0 rgba($color__black, 0.5) !default;
 // .app-navbar
-$app-navbar__background-color: rgba($color__black-russian, 0.96) !default;
+$app-navbar__background-color: rgba($color__black-russian, 0.90) !default;
 // .app-content
 $app-content__background-color: $color__white-smoke !default;
 
@@ -21,39 +21,34 @@ $app-content__background-color: $color__white-smoke !default;
         border-radius: 10px;
         box-shadow: $app-window__box-shadow;
         @extend %center-block;
+        @media screen and (max-height: 499px) {
+            position: static;
+            margin: 0 auto;
+        }
     }
     &-navbar {
         width: 150px;
         background-color: $app-navbar__background-color;
+        position: relative;
+        @include before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/desktop-bg.jpg");
+            background-attachment: fixed;
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            display: block;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            filter: blur(5px);
+        }
     }
     &-content {
         background-color: $app-content__background-color;
         flex: 1;
-    }
-}
-
-
-// .app-content - scrollbar
-$app-content__scrollbar__background-color: $divider-color !default;
-$app-content__scrollbar__border: 3px solid rgba($color__black, 0) !default;
-
-
-.scrollbar-supported {
-    .app-content {
-        overflow-y: auto;
-        &::-webkit-scrollbar {
-            width: 10px;
-        }
-        &::-webkit-scrollbar-thumb {
-            background-color: $app-content__scrollbar__background-color;
-            background-clip: padding-box;
-            border-radius: 2px;
-            border: $app-content__scrollbar__border;
-            border-top-width: 12px;
-            border-bottom-width: 12px;
-        }
-    }
-    .issues-daily {
-        padding-right: 10px;
     }
 }

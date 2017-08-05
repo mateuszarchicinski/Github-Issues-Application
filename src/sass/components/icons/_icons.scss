@@ -14,21 +14,21 @@
     }
     &-issues {
         &-opened {
-            background-image: url("/images/icon-opened-issues.svg");
+            background-image: url("../images/icon-opened-issues.svg");
         }
         &-closed {
-            background-image: url("/images/icon-closed-issues.svg");
+            background-image: url("../images/icon-closed-issues.svg");
         }
     }
     &-github {
-        background-image: url("/images/icon-github.svg");
+        background-image: url("../images/icon-github.svg");
     }
     &-star {
         &-notmarked {
-            background-image: url("/images/icon-star-notmarked.svg");
+            background-image: url("../images/icon-star-notmarked.svg");
         }
         &-marked {
-            background-image: url("/images/icon-star-marked.svg");
+            background-image: url("../images/icon-star-marked.svg");
         }
     }
 }

@@ -1,0 +1,15 @@
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//~~~~~~* ISSUE FAVOURITE*~~~~~~//+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+.issue-favourite {
+    cursor: pointer;
+    &__icon {
+        background-image: url("../images/icon-star-notmarked.svg");
+        transition: 0.1s background-image ease;
+    }
+    input:checked ~ .issue-favourite__icon {
+        background-image: url("../images/icon-star-marked.svg");
+    }
+}
