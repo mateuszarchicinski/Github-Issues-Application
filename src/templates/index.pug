@@ -7,95 +7,9 @@ extends layout/_layout
     Application Content
 
 block content
+    h1.hidden This application will fetch all your Github issues!
+
     // .trimmed-bg CSS class can be removed, then background will cover all available white spaces
     .desktop-view.trimmed-bg
-    h1.hidden Github Issues Application - Created by Mateusz Archiciński
-    main.app-window
-        nav(role="navigation" class="app-navbar")
-            .osx-buttons.osx-buttons-js
-                button(type="button" aria-label="To close application window" class="osx-buttons__close")
-                button(type="button" aria-label="To minimize application window" class="osx-buttons__minimize")
-                button(type="button" aria-label="To maximize application window" class="osx-buttons__maximize")
-            ul.nav-list
-                li
-                    button(type="button" data-status="all" class="nav-button nav-button-js")
-                        span(aria-hidden="true" class="icon icon-small icon-github nav-button__icon")
-                        span.nav-button__info All
-                        span.nav-button__issues-count 12
-                li
-                    button(type="button" data-status="opened" class="nav-button nav-button-js")
-                        span(aria-hidden="true" class="icon icon-small icon-issues-opened nav-button__icon")
-                        span.nav-button__info Open
-                        span.nav-button__issues-count 4
-                li
-                    button(type="button" data-status="closed" class="nav-button nav-button-js")
-                        span(aria-hidden="true" class="icon icon-small icon-issues-closed nav-button__icon")
-                        span.nav-button__info Closed
-                        span.nav-button__issues-count 8
-        .app-content
-            .issues-daily
-                span.issues-daily__date 19-07-2016
-                ul.issues-daily__list
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Page changes
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-marked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="1" checked="true" class="hidden")
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Review of last issues
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-marked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="2" checked="true" class="hidden")
-            .issues-daily
-                span.issues-daily__date 18-07-2016
-                ul.issues-daily__list
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Visual UI Update Review
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-notmarked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="3" class="hidden")
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Sidebar changes
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-notmarked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="4" class="hidden")
-            .issues-daily
-                span.issues-daily__date 15-07-2016
-                ul.issues-daily__list
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Crash update
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-notmarked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="5" class="hidden")
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Page visual UI Update Review
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-marked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="6" checked="true" class="hidden")
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Sidebar update
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-notmarked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="7" class="hidden")
-            .issues-daily
-                span.issues-daily__date 14-07-2016
-                ul.issues-daily__list
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Crash issue
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-marked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="8" checked="true" class="hidden")
-                    li.issues-daily__list-item
-                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") Visual update & Crash resolve
-                        label
-                            span(aria-hidden="true" class="icon icon-small icon-star-marked")
-                            span.text-hidden Mark as favourite issue
-                            input(name="issueFavourite" type="checkbox" value="9" checked="true" class="hidden")
+
+    include modules/_app

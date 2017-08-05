@@ -1,0 +1,19 @@
+//-
+    Nav List
+
+ul.nav-list
+    li
+        button(type="button" data-status="all" class="nav-button active nav-button-js")
+            span(aria-hidden="true" class="icon icon-small icon-github nav-button__icon") &nbsp;
+            span.nav-button__info All
+            span.nav-button__issues-count 12
+    li
+        button(type="button" data-status="opened" class="nav-button nav-button-js")
+            span(aria-hidden="true" class="icon icon-small icon-issues-opened nav-button__icon") &nbsp;
+            span.nav-button__info Open
+            span.nav-button__issues-count 4
+    li
+        button(type="button" data-status="closed" class="nav-button nav-button-js")
+            span(aria-hidden="true" class="icon icon-small icon-issues-closed nav-button__icon") &nbsp;
+            span.nav-button__info Closed
+            span.nav-button__issues-count 8

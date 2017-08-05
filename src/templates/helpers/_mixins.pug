@@ -1,2 +1,16 @@
 //-
     Mixins
+
+//- To create content with all issues depending on created day of each issue
+mixin createIssuesContent(data)
+    each issues, property in data
+        .issues-daily
+            span.issues-daily__date #{property}
+            ul.issues-daily__list
+                each issue in issues
+                    li.issues-daily__list-item
+                        a(href="https://github.com/mateuszarchicinski/Github-Issues-Application/issues/1" target="_blank" rel="help" class="issues-daily__link") #{issue.title}
+                        label(tabindex="0" class="issue-favourite")
+                            input(name="issueFavourite" type="checkbox" value=issue.id checked=issue.isFavourite class="hidden")
+                            span(aria-hidden="true" class="icon icon-small issue-favourite__icon")
+                            span.text-hidden Mark as favourite issue
