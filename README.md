@@ -1,4 +1,4 @@
-# Github-Issues-Application
+# Github Issues Application
 
 > This application provides simple window view of the operating system with OSX buttons, navigation containing filter buttons and buttons to marking favourites Github issues. With some more additional features like function to provides HTTP communication and generating filtered view, this application will get resources from Github API or any other and show your issues.
 
