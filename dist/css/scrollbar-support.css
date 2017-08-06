@@ -1,0 +1,16 @@
+.scrollbar-supported .app-content {
+  overflow-y: auto; }
+  .scrollbar-supported .app-content::-webkit-scrollbar {
+    width: 10px; }
+  .scrollbar-supported .app-content::-webkit-scrollbar-thumb {
+    background-color: #e0e0e0;
+    background-clip: padding-box;
+    border-radius: 2px;
+    border: 3px solid rgba(8, 6, 6, 0);
+    border-top-width: 12px;
+    border-bottom-width: 12px; }
+
+.scrollbar-supported .issues-daily {
+  padding-right: 10px; }
+
+/*# sourceMappingURL=maps/scrollbar-support.css.map */
