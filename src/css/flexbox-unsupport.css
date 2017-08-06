@@ -5,6 +5,9 @@
 .flexbox-unsupported .app-window::after {
   clear: both; }
 
+.flexbox-unsupported .app-window {
+  display: block; }
+
 .flexbox-unsupported .app-navbar, .flexbox-unsupported .app-content {
   height: 100%;
   float: left; }
@@ -24,6 +27,7 @@
 
 .flexbox-unsupported .issues-daily__list-item {
   line-height: 0;
+  display: list-item;
   text-align: justify; }
   .flexbox-unsupported .issues-daily__list-item::after {
     content: "";

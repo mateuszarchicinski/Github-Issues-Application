@@ -35,15 +35,15 @@ $nav-button__issues-count__color: $secondary-text-color !default;
         outline: 0;
         padding: 17px 15px;
         transition: 0.2s background-color ease;
-        &.active {
-            background-color: $nav-button__active__background-color;
-        }
         &:hover {
             background-color: $nav-button__hover__background-color;
         }
         &:active,
         &:focus {
             box-shadow: $nav-button__active-focus__box-shadow;
+        }
+        &.active {
+            background-color: $nav-button__active__background-color;
         }
         &__icon {}
         &__info {

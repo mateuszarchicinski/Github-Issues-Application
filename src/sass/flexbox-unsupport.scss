@@ -12,6 +12,7 @@
 .flexbox-unsupported {
     .app {
         &-window {
+            display: block;
             @extend %clearfix;
         }
         &-navbar,
@@ -44,6 +45,7 @@
         &__list {
             &-item {
                 line-height: 0;
+                display: list-item;
                 text-align: justify;
                 @include after {
                     content: "";

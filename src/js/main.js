@@ -3,10 +3,28 @@
 
 
     // FLEXBOX & SCROLLBAR SUPPORT CHECK
-    var flexStyle = document.createElement('div').style.flex,
-        isWebkit = /WebKit/.test(navigator.userAgent),
+    var isWebkit = /WebKit/.test(navigator.userAgent),
         bodyElem = document.getElementsByTagName('body')[0],
         headElem = document.getElementsByTagName('head')[0];
+
+    function isFlexbox() {
+        var stylesList = ['flex', 'flexDirection', 'justifyContent'], // Only these are used in CSS styles
+            testingElem = document.createElement('div');
+
+        testingElem.style.display = 'flex';
+
+        if (!testingElem.style.display) {
+            return false;
+        }
+
+        for (var i in stylesList) {
+            if (testingElem.style[stylesList[i]] === undefined) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
     function createLinkElem(href) {
         if (typeof href !== 'string') {
@@ -20,7 +38,7 @@
         return link;
     }
 
-    if (flexStyle === undefined) { // Troszkę dłuższy temat :)
+    if (!isFlexbox()) { // Troszkę dłuższy temat :)
         bodyElem.classList.add('flexbox-unsupported');
 
         headElem.appendChild(createLinkElem('css/flexbox-unsupport.css'));
@@ -50,7 +68,20 @@
 
     for (var i in navButtons) {
         navButtons[i].addEventListener('click', function () {
-            alert('You clicked navigation button which should triger function to show ' + this.getAttribute('data-status') + ' Github issues');
+            var self = this,
+                activeBtn = document.querySelector('.nav-button-js.active');
+
+            if (self === activeBtn) {
+                return;
+            }
+
+            activeBtn.classList.remove('active');
+
+            self.classList.add('active');
+
+            setTimeout(function () {
+                alert('You clicked navigation button which should triger function to show ' + self.getAttribute('data-status') + ' Github issues');
+            }, 500);
         });
     }
 
