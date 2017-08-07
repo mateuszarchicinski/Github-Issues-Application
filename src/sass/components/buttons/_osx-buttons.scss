@@ -20,6 +20,7 @@ $osx-buttons__active-focus__box-shadow: 0 0 15px 5px darken($color__navy-blue, 4
 .osx-buttons {
     height: 40px;
     background-color: $osx-buttons__background-color;
+    font-size: 0;
     &__close,
     &__minimize,
     &__maximize {

@@ -87,7 +87,8 @@ a {
 
 .osx-buttons {
   height: 40px;
-  background-color: #101022; }
+  background-color: #101022;
+  font-size: 0; }
   .osx-buttons__close, .osx-buttons__minimize, .osx-buttons__maximize {
     width: 10px;
     height: 10px;
